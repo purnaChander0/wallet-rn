@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5232;
 app.use(express.json());
 app.use(rateLimiter);
 
-app.get("api/health", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.status(200).json({ status: "Ok" });
 });
 
